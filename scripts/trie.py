@@ -73,10 +73,7 @@ def find_trie(root, start, seg_res, pos_res):
 				isfound = True
 			if not cur.child:
 				#print ret
-				if ret:
-					return [cur.ltype, ret]
-				else:
-					return ret
+				return [cur.ltype, ret]
 		elif pos_res[idx][0] in cur.child.keys():
 			#print '2'
 			#for w in cur.child.keys():
@@ -91,10 +88,7 @@ def find_trie(root, start, seg_res, pos_res):
 				isfound = True
 			if not cur.child:
 				#print ret
-				if ret:
-					return [cur.ltype, ret]
-				else:
-					return ret
+				return [cur.ltype, ret]
 		elif u'*' in cur.child.keys():
 			cur = cur.child[u'*']
 			if cur.extract == True:
@@ -105,10 +99,7 @@ def find_trie(root, start, seg_res, pos_res):
 				isfound = True
 			if not cur.child:
 				#print ret
-				if ret:
-					return [cur.ltype, ret]
-				else:
-					return ret
+				return [cur.ltype, ret]
 		elif u'-1' in cur.child.keys():
 			ret.append(seg_res[-2])
 			#print ret

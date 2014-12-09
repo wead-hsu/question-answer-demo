@@ -1,3 +1,6 @@
-data/*
+data/wiki-zh/*
+data/word2vec/*
 env/*
 word2vec/*
+*.pyc
+.DS_Store
